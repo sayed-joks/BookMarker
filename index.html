@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BookMarker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css
+" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="text-center py-5">Bookmarker</h1>
+    <div class="inputs-bookmarker">
+        <div class="container">
+            <div class="row gy-4 justify-content-center bookmarker-info">
+                <div class="input-group mb-3 ">
+                    <input oninput="vaildName()"  type="text" class="form-control position-relative" placeholder="siteName" aria-label="Username" aria-describedby="basic-addon1"  id="siteName">
+                    <label for="siteName"class="position-absolute" ><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+                  </div>
+                  <p class="alert alert-danger mb-3 d-none" role="alert" id="msgName">
+                    A simple danger alert—check it out!
+                  </p>
+                  <div class="input-group mb-3">
+                    <input oninput="validUrl() " type="text" class="form-control position-relative" placeholder="siteUrl" aria-label="Username" aria-describedby="basic-addon1" id="siteUrl">
+                    <label for="siteUrl"class="position-absolute" ><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                </div>
+                <p class="alert alert-danger mb-3 d-none" role="alert" id="msgUrl">
+                  A simple danger alert—check it out!
+                </p>
+                <button onclick="addBookMarker()" class="btn btn-outline-warning w-auto px-5" type="submit">Sumbit</button>
+            </div>
+        </div>
+    </div>
+    <div class="table-content">
+        <div class="container">
+            <table class="w-100 text-dark text-center mt-4 py-4 table" id="table">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize">index</th>
+                        <th class="text-capitalize">Website Name</th>
+                        <th class="text-capitalize">Visit</th>
+                        <th class="text-capitalize">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableContent"><tr class="">
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js
+"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
